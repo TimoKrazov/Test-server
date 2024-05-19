@@ -1,5 +1,6 @@
 import streamlit as st
 import pandas as pd
+from back import backend
 st.set_page_config(
     page_title="Универсальный парсер",
     page_icon= "🏳️‍🌈", layout="wide"
@@ -163,63 +164,64 @@ st.title('Универсальный парсер Excel-файлов')
 
 
 
-#Некая типо логика
+def get_files() -> list:
+    uploaded_files = st.file_uploader("Загрузите файлы Excel", type=["xls", "xlsx"], accept_multiple_files=True)
+    return uploaded_files
 
-uploaded_files = st.file_uploader("Загрузите файлы Excel", type=["xls", "xlsx"], accept_multiple_files=True)
 
-if uploaded_files:
-    for uploaded_file in uploaded_files:
-        st.write(f"###  Рассматриваемый файл: {uploaded_file.name}")
-        global df
+files = get_files()
+if files:
+    selected_ranges = st.session_state.get("selected_ranges", [])
+    #Индексы изначально верные, но потом становятся на 1 больше, чем должны быть, надо исправить
+    for uploaded_file in files:
+        st.write(f"### {uploaded_file.name}")
         df = pd.read_excel(uploaded_file, index_col=None)
-        st.session_state.clear()
+        new_row = pd.DataFrame([pd.Series([pd.NA] * len(df.columns))], columns=df.columns)
+        # Используем метод concat() для объединения новой строки с существующим DataFrame
+        df = pd.concat([new_row, df]).reset_index(drop=True)
+        search = r'\b 0 | [0-9]{1000}'
+        df.index += 1
+        number = 1
+        for column in df.columns:
+            word = str(column)
+            if 'Unnamed:' in word:
+                df.rename(columns={word: number}, inplace=True)
+                number += 1
+            else:
+                df.at[1, column] = column
+                df.rename(columns={column: number}, inplace=True)
+                number += 1
+        st.write(df)
 
         if df.empty:
-            st.write("Парсить нечего")
+            st.write("Данные отсутствуют в этом файле.")
         else:
+            backend.add_selected_range(df, selected_ranges)
+            st.session_state["selected_ranges"] = selected_ranges
 
-            new_row = pd.DataFrame([pd.Series([pd.NA] * len(df.columns))], columns=df.columns)
-            # Используем метод concat() для объединения новой строки с существующим DataFrame
-            df = pd.concat([new_row, df]).reset_index(drop=True)
-            search = r'\b 0 | [0-9]{1000}'
-            number = 1
-            df.index+=1
-            for column in df.columns:
-                word = str(column)
-                if 'Unnamed:' in word :
-                    df.rename(columns={word: number}, inplace=True)
-                    number+=1
+            if st.button("Получить данные для выбранных диапазонов"):
+                all_selected_ranges = backend.get_selected_ranges(df, selected_ranges)
+                if len(all_selected_ranges) == 1:
+                    st.write("Выбранный диапазон:")
                 else:
-                    df.at[1,column] = column
-                    df.rename(columns={column: number}, inplace=True)
-                    number+=1
-            st.write(df)
-            with st.sidebar:
-                option = st.selectbox(
-                    '',
-                    ("Удаление диапазона строк по условию", "Удаление диапазонов столбцов по условию", "Смещение некой области"),
-                    index=None,
-                    placeholder="Выберите метод..."
+                    st.write("Выбранные диапазоны:")
+                for selected_data in all_selected_ranges:
+                    st.write(selected_data)
+                # Возможность скачать результат в виде csv-файла
+                sd = backend.convert_to_csv(all_selected_ranges)
+                download = st.download_button(
+                    label="Download data as CSV",
+                    data=sd,
+                    file_name='Результат.csv',
+                    mime='text/csv'
                 )
-                col3, col4 = st.columns(2)
-                if (option == "Удаление диапазона строк по условию"):
-                    comand = 'delete_srt'
-                    max_row_value = len(df)
-                    with col3:
-                        start_row = st.number_input("Начальная строка", min_value=0, max_value=max_row_value, value=0,
-                                                key="start_row")
-                    with col4:
-                        end_row = st.number_input("Конечная строка", min_value=start_row, max_value=max_row_value,
-                                            value=max_row_value, key="end_row")
-                    st.write("P.S. Если Строка одна и та же, то вставляется одно и то же значение в оба поля")
-                elif (option =="Удаление диапазонов столбцов по условию"):
-                    comand = 'delete_stolb'
-                    max_col_value = len(df.columns)
-                    with col3:
-                        start_col = st.number_input("Начальный столбец", min_value=0, max_value=max_col_value, value=0,
-                                                key="start_col")
-                    with col4:
-                        end_col = st.number_input("Конечный столбец", min_value=start_col, max_value=max_col_value,
-                                            value=max_col_value, key="end_col")
-                    st.write("P.S. Если столбец один и тот же, то вставляется одно и то же значение в оба поля")
 
+            if selected_ranges:
+                st.write("Выбранные диапазоны:")
+                for i in range(1, len(selected_ranges) + 1):
+                    st.write(f"Диапазон {i}:")
+                    st.write(backend.chooses_ranges(df, selected_ranges[i - 1]))
+
+            # Удаляет со 2 нажатия, Егор исправь
+            if st.button("Очистить все диапазоны"):
+                st.session_state["selected_ranges"] = backend.clear_ranges(selected_ranges)
