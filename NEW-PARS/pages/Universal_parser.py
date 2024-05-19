@@ -9,8 +9,6 @@ st.set_page_config(
 
 st.markdown("""
             <style>
-            /*Общие настройки*/
-                /*Фон тела (Вне основного фона)*/
                 body {
                     background-color: rgb(0,80,78);
                 }
@@ -18,78 +16,80 @@ st.markdown("""
                 .main {
                     background-color: rgb(230, 230, 230);
                 }
-                /*Шапка*/
-                .st-emotion-cache-18ni7ap{
+                [data-testid="stHeader"]{
                     background: rgb(128,128,128);
                 }
-                .st-emotion-cache-1avcm0n{
-                    background: rgb(128,128,128);
-                }
-                /*Заголовок*/
-                .st-emotion-cache-10trblm{
+                [data-testid="StyledLinkIconContainer"]{
                     color: rgb(49, 51, 63);
                 }
                 /*Текст*/
-                .new_text {
+                [data-testid="stMarkdown"] {
                     color: rgb(49, 51, 63);
                     font-size:20px;
                 }
-                .st-emotion-cache-1cypcdb{
+                /*фон закрытия бок панели*/
+                [data-testid="stApp"] {
+                    background-color: rgb(230, 230, 230);
+                    color: rgb(240 73 35);
+                }
+                [data-testid="stSidebar"] {
                     background-color: rgb(0,80,78);
                     top: 0px;
                     height: 100% !important;
                 }
-                /*фон закрытия бок панели*/
-                .stApp {
-                    background-color: rgb(179, 179, 179);
-                }
-                /*цвет бок панели закрытия*/    
-                .st-emotion-cache-rawifx  {
-                    background-color: rgb(0,80,78);
-                }
                 /*цвет кнопки после зажатия*/
-                .st-emotion-cache-1uy0bt2:active {
-                    background: rgb(179, 179, 179);
-                }
-                .st-emotion-cache-1uy0bt2:visited{
-                    background: rgb(240, 73, 35);
-                }
-                /*Остальные кнопки*/
-                .st-emotion-cache-1m6wrpk{
-                    color: rgb(240,73,35);
-                }
-                /*кнопочки*/
-                .eczjsme6 {
+                [data-testid="stSidebarNavLink"] {
                     background: rgb(0,80,78);
                 }
-                .st-emotion-cache-1we6k59:hover {
-                    background: rgb(179,179,179);
-                    color: rgb(240, 73, 35) !important;
+                [class="st-emotion-cache-1m6wrpk eczjsme5"] {
+                    color: rgb(240,73,35);
                 }
-                .st-emotion-cache-1uy0bt2:hover {
+                [data-testid="stSidebarNavLink"].st-emotion-cache-18l0hbk:hover {
+                    background: rgb(179, 179, 179);
+                    color: rgb(240, 73, 35)
+                }
+                [data-testid="stSidebarNavLink"].st-emotion-cache-nziaof:visited{
                     background: rgb(240, 73, 35);
                 }
-                /*цвет элементов стримлита*/
-                .st-emotion-cache-13k62yr {
-                    color: rgb(240 73 35);
+                [data-testid="stSidebarNavLink"].st-emotion-cache-nziaof:hover{
+                    background: rgb(240, 73, 35);
+                }
+                [class="st-emotion-cache-1m6wrpk eczjsme5"] {
+                    color: rgb(240,73,35);
+                }
+                .eczjsme5{
+                    color:rgb(255, 255, 255);
+                }
+                [class="st-emotion-cache-17lntkn eczjsme5"]{
+                    color: rgb(240,73,35);
+                }
+                [class="st-emotion-cache-1m6wrpk eczjsme5"]{
+                    color: rgb(240,73,35);
+                }
+                [data-testid="stSidebarNavLink"].st-emotion-cache-1we6k59:hover {
+                    background: rgb(179, 179, 179);
+                    color: rgb(240, 73, 35)
+                }
+                [data-testid="stSidebarNavLink"].st-emotion-cache-1uy0bt2:visited{
+                    background: rgb(240, 73, 35);
                 }
                 /*стрелка открытия бок панели*/
-                .st-emotion-cache-1pbsqtx {
+                [data-testid="baseButton-headerNoPadding"] {
                     color: rgb(240, 73, 35);
                 }
-                .st-emotion-cache-a7yjq {
-                    background-color: rgb(0,80,78);
+                [data-testid="stSidebarNavLink"].st-emotion-cache-1uy0bt2:hover{
+                    background: rgb(240, 73, 35);
                 }
             </style>
         """, unsafe_allow_html=True)
 st.markdown("""
             <style>
                 /*Текст загрузки файлов*/
-                .st-emotion-cache-sh2krr {
+                [data-testid="stWidgetLabel"] {
                     color: rgb(49, 51, 63);
                 }
                 /*Полоса загрузки файлов*/
-                .e1b2p2ww15 {
+                [data-testid="stFileUploaderDropzone"] {
                     background-color: rgb(153, 153, 153);
                     color: rgb(49, 51, 63);
                 }
@@ -116,18 +116,12 @@ st.markdown("""
                     background-color: rgb(240, 73, 35);
                     color: rgb(250, 250, 250);
                 }
-                /*границы*/
-                .st-cq {
-                    border-bottom-color:rgb(255, 75, 75);
-                    border-top-color: rgb(255, 75, 75);
-                    border-right-color: rgb(255, 75, 75);
-                    border-left-color: rgb(255, 75, 75);
-                }
-                .st-ba {
-                    border-bottom-color:rgb(255, 75, 75);
-                    border-top-color: rgb(255, 75, 75);
-                    border-right-color: rgb(255, 75, 75);
-                    border-left-color: rgb(255, 75, 75);
+                [data-testid="stNumberInputContainer"]{
+                    border-bottom-color:rgb(255, 73, 35);
+                    border-top-color: rgb(255, 73, 35);
+                    border-right-color: rgb(255, 73, 35);
+                    border-left-color: rgb(255, 73, 35);
+                    background: rgb(255, 73, 35);
                 }
                 .st-emotion-cache-15wihvi, .st-emotion-cache-15wihvi:active, .st-emotion-cache-15wihvi:focus-visible {
                     background: rgb(240,73,35) !important;
@@ -140,23 +134,23 @@ st.markdown("""
                 .st-emotion-cache-oteskg:hover:enabled, .st-emotion-cache-oteskg:focus:enabled {
                     background:rgb(153, 153, 153);
                     color: rgb(0,80,78);
-                    transition: none 0s ease 0s;
-                    outline: none;
                 }
                 /*текст ограничений*/
                 .e1nzilvr5 {
                     color: rgb(240,73,35);
                 }
-                /*+ и -*/
-                .st-emotion-cache-oteskg {
-                    background: rgb(153, 153, 153);
+                
+                [data-testid="stNumberInput-StepDown"]{
+                    border: 2px solid rgb(240, 73, 35);
+                    border-radius: 5px;
+                    color: rgb(240, 73, 35);
+                    background: rgb(0,80,78);
                 }
-                /*текст +-*/
-                .st-emotion-cache-f2zl0u{
-                    color: rgb(0,80,78);
-                }
-                .st-emotion-cache-14zer8g{
-                    color: rgb(0,80,78);
+                [data-testid="stNumberInput-StepUp"]{
+                    border: 2px solid rgb(240, 73, 35);
+                    border-radius: 5px;
+                    color: rgb(240, 73, 35);
+                    background: rgb(0,80,78);
                 }
             </style>
             """, unsafe_allow_html=True)
