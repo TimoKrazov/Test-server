@@ -81,7 +81,7 @@ st.markdown("""
             </style>
             """, unsafe_allow_html=True)
 
-st.image('https://psv4.userapi.com/c909628/u305551478/docs/d32/ee8719e5729d/qw.png?extra=_MH_zU5vypp5PVNGzNwI5FxsuEuNPvV1vp_-0meYaOL2UNI3bNSKQ7Rh6BDtQvgdJ4XvT7f36H_XTk-gHjg1s74pk6D_cR6n5l3XmtR1BBab-DeiCo75vBwGtRZGsYS7imtvUcKaW1E4qao0YpI82NRjMg')
+st.image('https://psv4.userapi.com/c909628/u305551478/docs/d32/894db955a411/qw.png?extra=NR4WaDxmPToQbiV7LRKJ0P9X_1TqmkGwE4c82nKUJVtl5aaeLNw-ZlYrm9ps1s7i0HS76m7umSXxps2czQz5oHmcY6w4AQhBuTk8ay55aMd6xtY1gZq2uckcG4jECcqoV-b90oMrc9RX20YdjkwP5knElg')
 
 st.title('Универсальный парсер Excel-файлов')
 st.title('Об приложении')
