@@ -193,7 +193,7 @@ if files:
         else:
             backend.add_selected_range(df, selected_ranges)
             st.session_state["selected_ranges"] = selected_ranges
-            if selected_ranges:
+            if st.session_state["selected_ranges"] != []:
                 if st.button("Получить данные для выбранных диапазонов"):
                     all_selected_ranges = backend.get_selected_ranges(df, selected_ranges)
                     if len(all_selected_ranges) == 1:
