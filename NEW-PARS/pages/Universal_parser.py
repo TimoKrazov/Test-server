@@ -1,6 +1,6 @@
 import streamlit as st
 import pandas as pd
-import backend
+from back import backend
 
 st.set_page_config(
     page_title="Универсальный парсер",
