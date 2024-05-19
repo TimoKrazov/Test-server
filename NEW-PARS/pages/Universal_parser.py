@@ -1,13 +1,17 @@
 import streamlit as st
 import pandas as pd
-from back import backend
-
+from pages.back import backend
 st.set_page_config(
     page_title="Универсальный парсер",
-    page_icon="🏳️‍🌈", layout="wide"
+    page_icon= "🏳️‍🌈", layout="wide"
 )
 
 st.markdown("""
+            <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+            <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+            <span class="material-symbols-outlined">
+                transgender
+            </span>
             <style>
                 body {
                     background-color: rgb(0,80,78);
@@ -158,6 +162,8 @@ st.markdown("""
 st.title('Универсальный парсер Excel-файлов')
 
 
+
+
 #Некая типо логика
 def get_files() -> list:
     uploaded_files = st.file_uploader("Загрузите файлы Excel", type=["xls", "xlsx"], accept_multiple_files=True)
@@ -193,6 +199,7 @@ if files:
         else:
             backend.add_selected_range(df, selected_ranges)
             st.session_state["selected_ranges"] = selected_ranges
+            
             if st.session_state["selected_ranges"] != []:
                 if st.button("Получить данные для выбранных диапазонов"):
                     all_selected_ranges = backend.get_selected_ranges(df, selected_ranges)
@@ -210,9 +217,43 @@ if files:
                         file_name='Результат.csv',
                         mime='text/csv'
                     )
-                if st.button("Очистить все диапазоны"):
+                key = st.button("Очистить все диапазоны")
+                if key:
                     st.session_state["selected_ranges"] = []
-                st.write("Выбранные диапазоны:")
-                for i in range(1, len(selected_ranges) + 1):
-                    st.write(f"Диапазон {i}:")
-                    st.write(backend.chooses_ranges(df, selected_ranges[i - 1]))
+                if st.session_state["selected_ranges"] != []:
+                    if selected_ranges:
+                        st.write("Выбранные диапазоны:")
+                        for i in range(1, len(selected_ranges) + 1):
+                            st.write(f"Диапазон {i}:")
+                            st.write(backend.chooses_ranges(df, selected_ranges[i - 1]))
+             # Удаляет со 2 нажатия, Егор исправь
+            
+            # with st.sidebar:
+            #     option = st.selectbox(
+            #         '',
+            #         ("Удаление диапазона строк по условию", "Удаление диапазонов столбцов по условию",
+            #          "Смещение некой области"),
+            #         index=None,
+            #         placeholder="Выберите метод..."
+            #     )
+            #     col3, col4 = st.columns(2)
+            #     if option == "Удаление диапазона строк по условию":
+            #         comand = 'delete_srt'
+            #         max_row_value = len(df)
+            #         with col3:
+            #             start_row = st.number_input("Начальная строка", min_value=0, max_value=max_row_value, value=0,
+            #                                         key="start_row")
+            #         with col4:
+            #             end_row = st.number_input("Конечная строка", min_value=start_row, max_value=max_row_value,
+            #                                       value=max_row_value, key="end_row")
+            #         st.write("P.S. Если Строка одна и та же, то вставляется одно и то же значение в оба поля")
+            #     elif option == "Удаление диапазонов столбцов по условию":
+            #         comand = 'delete_stolb'
+            #         max_col_value = len(df.columns)
+            #         with col3:
+            #             start_col = st.number_input("Начальный столбец", min_value=0, max_value=max_col_value, value=0,
+            #                                         key="start_col")
+            #         with col4:
+            #             end_col = st.number_input("Конечный столбец", min_value=start_col, max_value=max_col_value,
+            #                                       value=max_col_value, key="end_col")
+            #         st.write("P.S. Если столбец один и тот же, то вставляется одно и то же значение в оба поля")
