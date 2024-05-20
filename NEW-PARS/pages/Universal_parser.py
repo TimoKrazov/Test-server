@@ -152,11 +152,6 @@ st.markdown("""
                     background:rgb(153, 153, 153);
                     color: rgb(0,80,78);
                 }
-                /*текст ограничений*/
-                .e1nzilvr5 {
-                    color: rgb(240,73,35);
-                }
-                
                 [data-testid="stNumberInput-StepDown"]{
                     border: 2px solid rgb(240, 73, 35);
                     border-radius: 5px;
