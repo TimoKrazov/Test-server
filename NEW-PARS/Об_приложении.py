@@ -82,7 +82,7 @@ st.markdown("""
                     font-size: 20px;
                 }
                 ul {
-                    font-size: 20px;
+                    font-size: 20px !important;
                 }
                 li{
                     font-size: 20px;
