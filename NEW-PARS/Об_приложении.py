@@ -81,7 +81,7 @@ st.markdown("""
                 .new_text{
                     font-size: 20px;
                 }
-                .custom_list {
+                [data-testid="stMarkdownContainer"] {
                     font-size: 20px !important;
                 }
             </style>
