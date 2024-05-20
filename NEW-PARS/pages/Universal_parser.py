@@ -122,7 +122,7 @@ st.markdown("""
                     color: rgb(240,73,35);
                     height: 100%;
                 }
-                [data-testid="baseButton-secondary"]:hover{
+                [data-testid="stButton"]:hover{
                     background-color: rgb(0,80,78);
                     border-color: rgb(0,80,78);
                     color: rgb(240,73,35);
