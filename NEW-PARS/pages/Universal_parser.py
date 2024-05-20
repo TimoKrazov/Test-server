@@ -166,7 +166,7 @@ st.markdown("""
                     margin-left: 3px;
                 }
                 [data-testid="stNumberInput-StepDown"]:hover:enabled, [data-testid="stNumberInput-StepDown"]:focus:enabled,[data-testid="stNumberInput-StepUp"]:hover:enabled, [data-testid="stNumberInput-StepUp"]:focus:enabled {
-                    background-color: rgb(0,80,78);
+                    background: rgb(0,80,78);
                 }
                 [data-testid="stFileUploaderFileName"] {
                     color: rgb(49, 51, 63);
