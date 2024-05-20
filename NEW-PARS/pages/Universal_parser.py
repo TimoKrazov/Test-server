@@ -104,50 +104,31 @@ st.markdown("""
                     color: rgb(240, 73, 35);
                 }
                 /*кнопочка*/
-                [data-testid="baseButton-secondary"]{
+                [data-testid="stButton"]{
                     background-color: rgb(153, 153, 153);
                     border: 5px solid rgb(0,80,78);
                     color: rgb(0,80,78);
                 }
-                [data-testid="baseButton-secondary"] p {
-                    color: rgb(0,80,78);
-                    height: 100%;
-                }
-                [data-testid="baseButton-secondary"]:active{
+                [data-testid="stButton"]:active{
                     background-color: rgb(0,80,78);
                     border-color: rgb(128,128,128);
                     color: rgb(240,73,35);
-                }
-                [data-testid="baseButton-secondary"] p:active {
-                    color: rgb(240,73,35);
-                    height: 100%;
                 }
                 [data-testid="stButton"]:hover{
                     background-color: rgb(0,80,78);
                     border-color: rgb(0,80,78);
                     color: rgb(240,73,35);
                 }
-                [data-testid="baseButton-secondary"] p:hover {
-                    color: rgb(240,73,35);
-                    height: 100%;
-                }
-                [data-testid="baseButton-secondary"]:focus {
+                [data-testid="stButton"]:focus {
                     background-color: rgb(0,80,78);
                     border-color: rgb(0,80,78);
                     color: rgb(240,73,35);
                 }
-                [data-testid="baseButton-secondary"] p:focus{
-                    color: rgb(240,73,35);
-                    height: 100%;
-                }
-                [data-testid="baseButton-secondary"]:focus:not(:active) {
+
+                [data-testid="stButton"]:focus:not(:active) {
                     background-color: rgb(0,80,78);
                     border-color: rgb(0,80,78);
                     color: rgb(240,73,35);
-                }
-                [data-testid="baseButton-secondary"] p:focus:not(:active) {
-                   color: rgb(240,73,35);
-                   height: 100%;
                 }
                         /*фон методов*/
                 [data-testid="stNumberInput-Input"]{
