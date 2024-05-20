@@ -81,6 +81,7 @@ st.markdown("""
                 }
                 [data-testid="stMarkdownContainer"] {
                     color: rgb(49,51,63);
+                    font-weight: 700;
                 }
             </style>
         """, unsafe_allow_html=True)
