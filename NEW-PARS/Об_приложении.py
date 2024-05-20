@@ -79,7 +79,7 @@ st.markdown("""
                     background: rgb(240, 73, 35);
                 }
                 ul {
-                    font-size: 1rem;
+                    font-size: 20px;;
                 }
             </style>
             """, unsafe_allow_html=True)
