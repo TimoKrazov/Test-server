@@ -79,7 +79,7 @@ st.markdown("""
                 [data-testid="stSidebarNavLink"].st-emotion-cache-1uy0bt2:hover{
                     background: rgb(240, 73, 35);
                 }
-                [data-testid="stMarkdownContainer"] {
+                [data-testid="stMarkdownContainer"] p {
                     color: rgb(49,51,63);
                     font-weight: 700 !important;
                 }
