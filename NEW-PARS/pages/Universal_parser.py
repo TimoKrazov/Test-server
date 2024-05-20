@@ -163,6 +163,7 @@ st.markdown("""
                     border-radius: 5px;
                     color: rgb(240, 73, 35);
                     background: rgb(0,80,78);
+                    margin-left: 3px;
                 }
                 [data-testid="stFileUploaderFileName"] {
                     color: rgb(49, 51, 63);
