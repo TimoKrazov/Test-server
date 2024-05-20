@@ -107,6 +107,7 @@ st.markdown("""
                 [data-testid="baseButton-secondary"]{
                     background-color: rgb(153, 153, 153);
                     border: 5px solid rgb(0,80,78);
+                    color: rgb(0,80,78);
                 }
                 [data-testid="baseButton-secondary"] p {
                     color: rgb(0,80,78);
@@ -114,6 +115,7 @@ st.markdown("""
                 [data-testid="baseButton-secondary"]:active{
                     background-color: rgb(0,80,78);
                     border-color: rgb(128,128,128);
+                    color: rgb(240,73,35);
                 }
                 [data-testid="baseButton-secondary"] p:active {
                     color: rgb(240,73,35)
@@ -121,6 +123,7 @@ st.markdown("""
                 [data-testid="baseButton-secondary"]:hover{
                     background-color: rgb(0,80,78);
                     border-color: rgb(0,80,78);
+                    color: rgb(240,73,35);
                 }
                 [data-testid="baseButton-secondary"] p:hover {
                     color: rgb(240,73,35);
@@ -128,6 +131,7 @@ st.markdown("""
                 [data-testid="baseButton-secondary"]:focus {
                     background-color: rgb(0,80,78);
                     border-color: rgb(0,80,78);
+                    color: rgb(240,73,35);
                 }
                 [data-testid="baseButton-secondary"] p:focus{
                     color: rgb(240,73,35);
@@ -135,6 +139,7 @@ st.markdown("""
                 [data-testid="baseButton-secondary"]:focus:not(:active) {
                     background-color: rgb(0,80,78);
                     border-color: rgb(0,80,78);
+                    color: rgb(240,73,35);
                 }
                 [data-testid="baseButton-secondary"] p:focus:not(:active) {
                    color: rgb(240,73,35);
