@@ -104,27 +104,27 @@ st.markdown("""
                     color: rgb(240, 73, 35);
                 }
                 /*кнопочка*/
-                [data-testid="baseButton-secondary"] {
+                [data-testid="baseButton-secondary"], [data-testid="baseButton-secondary"] p {
                     background-color: rgb(153, 153, 153);
                     border: 5px solid rgb(0,80,78);
                     color: rgb(0,80,78);
                 }
-                [data-testid="baseButton-secondary"]:active {
+                [data-testid="baseButton-secondary"]:active, [data-testid="baseButton-secondary"] p:active {
                     background-color: rgb(0,80,78);
                     border-color: rgb(128,128,128);
                     color: rgb(240,73,35) !important;
                 }
-                [data-testid="baseButton-secondary"]:hover {
+                [data-testid="baseButton-secondary"]:hover, [data-testid="baseButton-secondary"] p:hover {
                     background-color: rgb(0,80,78);
                     border-color: rgb(0,80,78);
                     color: rgb(240,73,35) !important;
                 }
-                [data-testid="baseButton-secondary"]:focus {
+                [data-testid="baseButton-secondary"]:focus, [data-testid="baseButton-secondary"] p:focus {
                     background-color: rgb(0,80,78);
                     border-color: rgb(0,80,78);
                     color: rgb(240,73,35) !important;
                 }
-                [data-testid="baseButton-secondary"]:focus:not(:active) {
+                [data-testid="baseButton-secondary"]:focus:not(:active), [data-testid="baseButton-secondary"] p:focus:not(:active) {
                     background-color: rgb(0,80,78);
                     border-color: rgb(0,80,78);
                     color: rgb(240,73,35) !important;
