@@ -84,7 +84,7 @@ st.markdown("""
                 ul {
                     font-size: 20px;
                 }
-                .li{
+                li{
                     font-size: 20px;
                 }
             </style>
