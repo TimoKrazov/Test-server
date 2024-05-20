@@ -131,7 +131,7 @@ st.markdown("""
                         /*фон методов*/
                 [data-testid="stNumberInput-Input"]{
                     background-color: rgb(153, 153, 153);
-                    color: rgb(49,51,63);
+                    color: rgb(0,80,78);
                 }
                 [data-testid="stNumberInputContainer"]{
                     border-bottom-color:rgb(153, 153, 153);
