@@ -78,8 +78,8 @@ st.markdown("""
                 [data-testid="stSidebarNavLink"].st-emotion-cache-1uy0bt2:hover{
                     background: rgb(240, 73, 35);
                 }
-                .listik{
-                    
+                ul {
+                    font-size: 1rem;
                 }
             </style>
             """, unsafe_allow_html=True)
@@ -94,12 +94,10 @@ st.markdown('<div class = "new_text">Универсальный парсер - �
 st.markdown('<div class = "new_text">Полный функционал Парсера: </div>',  unsafe_allow_html= True)
 
 st.markdown("""
-        <div class = "new_text">
         <ul class="custom-list">
             <li>Загрузка нескольких файлов</li>
             <li>Выбор нескольких диапазонов</li>
             <li>Очистка диапазонов</li>
             <li>Преобразование в csv-файл</li>
         </ul>
-        </div>
         """, unsafe_allow_html= True)
