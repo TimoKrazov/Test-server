@@ -78,6 +78,9 @@ st.markdown("""
                 [data-testid="stSidebarNavLink"].st-emotion-cache-1uy0bt2:hover{
                     background: rgb(240, 73, 35);
                 }
+                .new_text{
+                    font-size: 20px;
+                }
                 ul {
                     font-size: 20px;;
                 }
