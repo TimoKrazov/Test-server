@@ -105,7 +105,7 @@ st.markdown("""
                     border: 5px solid rgba(0,80,78, 0.2);
                     color: rgb(0,80,78);
                 }
-                [data-testid="baseButton-secondary"]:active {
+                [data-testid="baseButton-secondary"]:active:focus {
                     background-color: rgb(0,80,78);
                     border-color: rgb(240,73,35);
                     color: rgb(240,73,35);
