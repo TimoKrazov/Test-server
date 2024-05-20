@@ -3,7 +3,7 @@ import pandas as pd
 from back import backend
 st.set_page_config(
     page_title="Универсальный парсер",
-    page_icon= "🏳️‍🌈", layout="wide"
+    page_icon= "🍔", layout="wide"
 )
 
 st.markdown("""
