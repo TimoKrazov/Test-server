@@ -79,6 +79,9 @@ st.markdown("""
                 [data-testid="stSidebarNavLink"].st-emotion-cache-1uy0bt2:hover{
                     background: rgb(240, 73, 35);
                 }
+                [data-testid="stMarkdownContainer"] {
+                    color; rgb(49,51,63);
+                }
             </style>
         """, unsafe_allow_html=True)
 st.markdown("""
