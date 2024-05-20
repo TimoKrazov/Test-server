@@ -105,17 +105,18 @@ st.markdown("""
                     border: 5px solid rgba(0,80,78, 0.2);
                     color: rgb(0,80,78);
                 }
-                [data-testid="baseButton-secondary"]:active:focus {
+                [data-testid="baseButton-secondary"]:active {
+                    background-color: rgb(0,80,78);
+                    border-color: rgb(240,73,35);
+                    color: rgb(240,73,35);
+                }
+                [data-testid="baseButton-secondary"]:hover {
                     background-color: rgb(0,80,78);
                     border-color: rgb(240,73,35);
                     color: rgb(240,73,35);
                 }
                         /*фон методов*/
                 [data-testid="stNumberInput-Input"]{
-                    background-color: rgb(240, 73, 35);
-                    color: rgb(250, 250, 250);
-                }
-                .st-bb {
                     background-color: rgb(240, 73, 35);
                     color: rgb(250, 250, 250);
                 }
