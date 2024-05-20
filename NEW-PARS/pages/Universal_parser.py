@@ -106,18 +106,18 @@ st.markdown("""
                     color: rgb(0,80,78);
                 }
                 [data-testid="baseButton-secondary"]:active {
-                    background-color: rgb(128,128,128);
-                    border-color: rgb(240,73,35);
+                    background-color: rgb(0,80,78);
+                    border-color: rgb(128,128,128);
                     color: rgb(240,73,35);
                 }
                 [data-testid="baseButton-secondary"]:hover {
-                    background-color: rgb(128,128,128);
-                    border-color: rgb(240,73,35);
+                    background-color: rgb(0,80,78);
+                    border-color: rgb(128,128,128);
                     color: rgb(240,73,35);
                 }
                 [data-testid="baseButton-secondary"]:focus {
-                    background-color: rgb(128,128,128);
-                    border-color: rgb(240,73,35);
+                    background-color: rgb(0,80,78);
+                    border-color: rgb(128,128,128);
                     color: rgb(240,73,35);
                 }
                         /*фон методов*/
