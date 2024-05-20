@@ -83,8 +83,8 @@ st.markdown("""
                     color: rgb(49,51,63);
                     font-weight: 700;
                 }
-                .p {
-                    font-weight: 700;
+                .p, ol, ul, dl  {
+                    font-weight: 700 !important;
                 }
             </style>
         """, unsafe_allow_html=True)
