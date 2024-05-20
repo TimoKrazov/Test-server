@@ -130,8 +130,8 @@ st.markdown("""
                 }
                         /*фон методов*/
                 [data-testid="stNumberInput-Input"]{
-                    background-color: rgb(240, 73, 35);
-                    color: rgb(250, 250, 250);
+                    background-color: rgb(153, 153, 153);
+                    color: rgb(49,51,63);
                 }
                 [data-testid="stNumberInputContainer"]{
                     border-bottom-color:rgb(255, 73, 35);
@@ -163,6 +163,9 @@ st.markdown("""
                     border-radius: 5px;
                     color: rgb(240, 73, 35);
                     background: rgb(0,80,78);
+                }
+                [data-testid="stFileUploaderFileName"] {
+                    color: rgb(49, 51, 63);
                 }
             </style>
             """, unsafe_allow_html=True)
