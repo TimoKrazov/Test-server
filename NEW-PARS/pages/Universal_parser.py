@@ -135,7 +135,7 @@ st.markdown("""
                 [data-testid="stNumberInput-Input"]{
                     background-color: rgb(153, 153, 153);
                     color: rgb(0,80,78);
-                    font-weight: 700;
+                    font-weight: 700 !important;
                 }
                 [data-testid="stNumberInputContainer"]{
                     border-bottom-color:rgb(153, 153, 153);
