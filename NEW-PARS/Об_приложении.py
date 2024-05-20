@@ -90,3 +90,11 @@ st.title('Об приложении')
 st.markdown('<div class = "new_text">Универсальный парсер - приложение, написанное на Python и способное преобразовывать Excel-файл в формат csv, вводя новые корректировки в файл или неизменяя его. </div>',  unsafe_allow_html= True)
 st.markdown('<div class = "new_text">Полный функционал Парсера: </div>',  unsafe_allow_html= True)
 
+st.markdown("""
+        <ul class="custom-list">
+            <li>Item 1</li>
+            <li>Item 2</li>
+            <li>Item 3</li>
+            <li>Item 4</li>
+        </ul>
+        """, unsafe_allow_html= True)
