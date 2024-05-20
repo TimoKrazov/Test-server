@@ -107,7 +107,7 @@ st.markdown("""
                 [data-testid="baseButton-secondary"]{
                     background-color: rgb(153, 153, 153);
                     border: 5px solid rgb(0,80,78);
-                    color: rgb(0,80,78) !important;
+                    color: rgb(0,80,78);
                 }
                 [data-testid="baseButton-secondary"]:active{
                     background-color: rgb(0,80,78);
