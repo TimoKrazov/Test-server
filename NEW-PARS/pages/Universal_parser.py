@@ -8,6 +8,7 @@ st.set_page_config(
 
 st.markdown("""
             <style>
+                <style>
                 body {
                     background-color: rgb(0,80,78);
                 }
@@ -78,6 +79,12 @@ st.markdown("""
                 }
                 [data-testid="stSidebarNavLink"].st-emotion-cache-1uy0bt2:hover{
                     background: rgb(240, 73, 35);
+                }
+                .new_text{
+                    font-size: 20px;
+                }
+                ul {
+                    font-size: 20px;
                 }
                 [data-testid="stWidgetLabel"] p {
                     color: rgb(49,51,63);
