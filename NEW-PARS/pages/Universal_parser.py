@@ -134,11 +134,11 @@ st.markdown("""
                     color: rgb(49,51,63);
                 }
                 [data-testid="stNumberInputContainer"]{
-                    border-bottom-color:rgb(255, 73, 35);
-                    border-top-color: rgb(255, 73, 35);
-                    border-right-color: rgb(255, 73, 35);
-                    border-left-color: rgb(255, 73, 35);
-                    background: rgb(255, 73, 35);
+                    border-bottom-color:rgb(153, 153, 153);
+                    border-top-color: rgb(153, 153, 153);
+                    border-right-color: rgb(153, 153, 153);
+                    border-left-color: rgb(153, 153, 153);
+                    background: rgb(153, 153, 153);
                 }
                 .st-emotion-cache-15wihvi, .st-emotion-cache-15wihvi:active, .st-emotion-cache-15wihvi:focus-visible {
                     background: rgb(240,73,35) !important;
