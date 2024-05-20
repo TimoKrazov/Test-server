@@ -119,7 +119,7 @@ st.title('Создатели')
 
 col5, col6, col7, col8 = st.columns(4)
 with col5:
-    st.markdown('<img class="rounded-image" src=https://sun9-56.userapi.com/impg/WCQb1DWNhkVjTcT-3VoqhZGzofUCvZLgnakKYg/1PS8f22RBCQ.jpg?size=490x506&quality=96&sign=d207fd654beed6a0fe02eab6a79316d2&type=album width="200">', unsafe_allow_html=True)
+    st.markdown('<img class="rounded-image" src=https://sun9-78.userapi.com/impg/NfxasRdc3eEVjCVcl1VTbRswjVQFpxHvkBTYJw/aeF13_VeD6U.jpg?size=998x2160&quality=96&sign=772de9a33934054d71542a2a77729360&type=album width="200">', unsafe_allow_html=True)
     st.markdown('<div class="creaters"> Смирнягин Руслан: тимлид и тестировщик, The KFC King!🍔 </div>', unsafe_allow_html=True)
 with col6:
     st.markdown('<img class="rounded-image" src=https://sun9-65.userapi.com/impg/Qt7o-q-Q8StEgzrB13JoHf0EG18w7fgsTP2Gig/UMb3ivEqeLI.jpg?size=309x295&quality=96&sign=9b915d7b658c613730b18eeaa9b556fc&type=album width="200">', unsafe_allow_html=True)
