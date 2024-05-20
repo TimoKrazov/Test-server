@@ -83,6 +83,9 @@ st.markdown("""
                     color: rgb(49,51,63);
                     font-weight: 700;
                 }
+                .p{
+                    font-weight: 700;
+                }
             </style>
         """, unsafe_allow_html=True)
 st.markdown("""
@@ -135,7 +138,6 @@ st.markdown("""
                 [data-testid="stNumberInput-Input"]{
                     background-color: rgb(153, 153, 153);
                     color: rgb(0,80,78);
-                    font-weight: 700 !important;
                 }
                 [data-testid="stNumberInputContainer"]{
                     border-bottom-color:rgb(153, 153, 153);
