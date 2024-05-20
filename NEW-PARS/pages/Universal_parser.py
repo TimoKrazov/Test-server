@@ -100,12 +100,12 @@ st.markdown("""
                     color: rgb(240, 73, 35);
                 }
                 /*кнопочка*/
-                .ef3psqc12 {
+                [data-testid="baseButton-secondary"] {
                     background-color: rgb(153, 153, 153);
-                    border: 5px solid rgba(49, 51, 63, 0.2);
-                    color: rgb(49, 51, 63);
+                    border: 5px solid rgba(0,80,78, 0.2);
+                    color: rgb(0,80,78);
                 }
-                .ef3psqc12:active {
+                [data-testid="baseButton-secondary"]:active {
                     background-color: rgb(153, 153, 153);
                     border-color: rgb(240,73,35);
                     color: rgb(240,73,35);
