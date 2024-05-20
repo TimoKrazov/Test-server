@@ -111,7 +111,7 @@ st.markdown("""
                     color: rgb(240,73,35);
                 }
                         /*фон методов*/
-                [data-baseweb="input"]{
+                [data-testid="stNumberInput-Input"]{
                     background-color: rgb(240, 73, 35);
                     color: rgb(250, 250, 250);
                 }
