@@ -111,6 +111,7 @@ st.markdown("""
                 }
                 [data-testid="baseButton-secondary"] p {
                     color: rgb(0,80,78);
+                    height: 100%;
                 }
                 [data-testid="baseButton-secondary"]:active{
                     background-color: rgb(0,80,78);
@@ -118,7 +119,8 @@ st.markdown("""
                     color: rgb(240,73,35);
                 }
                 [data-testid="baseButton-secondary"] p:active {
-                    color: rgb(240,73,35)
+                    color: rgb(240,73,35);
+                    height: 100%;
                 }
                 [data-testid="baseButton-secondary"]:hover{
                     background-color: rgb(0,80,78);
@@ -127,6 +129,7 @@ st.markdown("""
                 }
                 [data-testid="baseButton-secondary"] p:hover {
                     color: rgb(240,73,35);
+                    height: 100%;
                 }
                 [data-testid="baseButton-secondary"]:focus {
                     background-color: rgb(0,80,78);
@@ -135,6 +138,7 @@ st.markdown("""
                 }
                 [data-testid="baseButton-secondary"] p:focus{
                     color: rgb(240,73,35);
+                    height: 100%;
                 }
                 [data-testid="baseButton-secondary"]:focus:not(:active) {
                     background-color: rgb(0,80,78);
@@ -143,6 +147,7 @@ st.markdown("""
                 }
                 [data-testid="baseButton-secondary"] p:focus:not(:active) {
                    color: rgb(240,73,35);
+                   height: 100%;
                 }
                         /*фон методов*/
                 [data-testid="stNumberInput-Input"]{
