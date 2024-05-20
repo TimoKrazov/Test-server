@@ -81,7 +81,7 @@ st.markdown("""
                 .new_text{
                     font-size: 20px;
                 }
-                [data-testid="stMarkdownContainer"] {
+                ul {
                     font-size: 20px !important;
                 }
             </style>
