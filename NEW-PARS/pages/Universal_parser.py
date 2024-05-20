@@ -108,6 +108,7 @@ st.markdown("""
                     background-color: rgb(153, 153, 153);
                     border: 5px solid rgb(0,80,78);
                     color: rgb(0,80,78);
+                    font-weight: 700;
                 }
                 [data-testid="baseButton-secondary"]:active{
                     background-color: rgb(0,80,78);
