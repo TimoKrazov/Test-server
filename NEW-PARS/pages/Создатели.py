@@ -128,5 +128,5 @@ with col7:
     st.markdown('<img class="rounded-image" src=https://sun9-63.userapi.com/impg/bP0q_JVaMOawdjRVOxA93ccBJd8-NHxX1mVf_Q/KuXIXeu7Vfc.jpg?size=236x253&quality=96&sign=5e5f68119fdb57a1fb696b9295b67a06&type=album width="200">', unsafe_allow_html=True)
     st.markdown('<div class="creaters"> Тютюнин Николай: backend-разработка </div>', unsafe_allow_html=True)
 with col8:
-    st.markdown('<img class="rounded-image" src=https://sun9-54.userapi.com/impg/HcFufjn39ge-XNZpuHGiJD-Jj4I-jyv3dy0gFw/wPImGzYLiSY.jpg?size=327x337&quality=96&sign=70da940d4e25757fda9b06b2d008011f&type=album width="200">', unsafe_allow_html=True)
+    st.markdown('<img class="rounded-image" src= width="200">', unsafe_allow_html=True)
     st.markdown('<div class="creaters"> Шакирянов Егор: frontend-разработка </div>', unsafe_allow_html=True)
